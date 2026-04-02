@@ -1,0 +1,70 @@
+body {
+    background-color: #ffe0e0;
+     font-family: Verdana, Geneva, sans-serif;
+}
+
+.container-form {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 20px rgba(57, 49, 49, 0.2);
+    margin: 100px auto; 
+    width: 320px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    
+   
+}
+
+.container-form h2 {
+    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ h1 {
+    text-align: center;
+    margin-top: 50px;      
+    margin-bottom: 20px;    
+}
+
+
+.botao-tabela {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #eec1c1;
+    color: white;              
+    text-decoration: none;     
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+.botao-tabela:hover {
+    background-color:  #e18686;
+}
+
+
+
+input[type="submit"] {
+    display: inline-block;
+    padding: 12px 25px;        
+    background-color: #eec1c1;
+    color: white;             
+    border: none;              
+    border-radius: 5px;       
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+/* Efeito ao passar o mouse */
+input[type="submit"]:hover {
+    background-color: #c81e2f; /* vermelho */
+}

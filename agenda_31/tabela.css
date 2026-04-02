@@ -1,0 +1,97 @@
+/* Centraliza a tabela e adiciona estilo */
+.tabela {
+    width: 50%;
+    margin: 20px auto;           
+    margin-top: 100px; 
+    border-collapse: collapse;    
+    border: 2px solid #e64a4a;   
+    background-color: #ffffff;  
+    box-shadow: 0 10px 10px rgba(16, 15, 15, 0.1); 
+    
+}
+
+
+.tabela th {
+    background-color: #f7adad;
+    color: white;                 
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #e16868;
+     font-family: Verdana, Geneva, sans-serif;
+}
+
+
+.tabela td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #d24444;
+     font-family: Verdana, Geneva, sans-serif;
+}
+
+
+.tabela tr:hover {
+    background-color: #e82828;;
+}
+
+h2 {
+    background-color: #f7adad;   
+    color: white;                 
+    padding: 10px 20px;          
+    border-radius: 8px;           
+    display: block;               
+    width: fit-content;         
+    margin: 60px auto 20px auto;  
+    text-align: center;     
+     font-family: Verdana, Geneva, sans-serif;      
+}
+
+body {
+    background-color:  #ffe0e0;  
+}
+
+
+.btn {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 2px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+.btn.editar {
+    background-color: #f7adad; 
+}
+.btn.editar:hover {
+    background-color:  #e46c6c;
+}
+
+
+.btn.excluir {
+    background-color: #eb4f5e; /* vermelho */
+}
+.btn.excluir:hover {
+    background-color: #c82333;
+}
+
+
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0 10px 30px; /* topo 0, direita 0, baixo 20px, esquerda 20px */
+    background-color: #c82333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color:  #c82333;  
+}
