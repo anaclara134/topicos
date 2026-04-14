@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temperatura</title>
+</head>
+<body>
+    <h2 id="texto"></h2>
+    <img id="img" width="200">
+    <script>
+        let celsius = Number(prompt("digite a temperatura em celsius"));
+        let dia = Number(prompt("digite o dia"));
+        let mes = Number(prompt("digite o mês (1 a 12)")); 
+        let ano = Number(prompt("digite o ano"));
+
+
+
+        let fahrenheit = (celsius * 9/5) + 32;
+
+        alert("Celsius: " + celsius);
+        alert("Fahrenheit: " + fahrenheit);
+
+        if (celsius >=-5 && celsius <=15){
+            document.body.style.backgroundColor ="blue";
+            alert ("FRIO");
+        } else if (celsius >=16 && celsius <=25) {
+            document.body.style.backgroundColor ="green";
+            alert ("AGRADAVEL");
+
+        } else if (celsius >=26) {
+            document.body.style.backgroundColor ="red";
+            alert("CALOR");
+        }
+
+        if (
+    (mes == 12 && dia >= 21) ||
+    (mes == 1 && dia <=31)     ||           
+    (mes == 2 && dia <=28)      ||
+    (mes == 3 && dia >= 20 )     
+) {
+
+    alert("estamos no verão");
+    document.getElementById("texto").innerHTML = "verão";
+    document.getElementById("img").src ="verao.jpg";
+
+} else if (
+    (mes == 3 && dia >= 21) ||
+    (mes == 4 && dia <=30)  ||          
+    (mes == 5 && dia <=31) ||  
+    (mes == 6 && dia <= 20)) {
+
+   alert("estamos no outono");
+     document.getElementById("texto").innerHTML = "outono";
+    document.getElementById("img").src ="outono.jpg";
+
+
+}  else if (
+    (mes == 6 && dia >= 21)|| 
+    (mes == 7 && dia <=31)   ||          
+    (mes == 8  && dia <=31) ||
+    (mes == 9 && dia <= 22)) {
+
+   alert("estamos no inverno");
+     document.getElementById("texto").innerHTML = "inverno";
+    document.getElementById("img").src ="inverno.jpg";
+
+
+}
+
+ else if (
+    (mes == 9 && dia >= 23) ||
+    (mes == 10 && dia <=31) ||   
+    (mes == 11 && dia <=30)||
+    (mes == 12 && dia <= 21)) {
+
+   alert("estamos na primavera");
+     document.getElementById("texto").innerHTML = "primavera";
+    document.getElementById("img").src ="primavera.jpg";
+
+
+}
+
+
+    </script>
+    
+</body>
+</html>
