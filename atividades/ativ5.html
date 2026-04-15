@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <div>
+    <p> Nome
+    <input type="text" id="nome" placeholder="Digite seu Nome"> </p>
+    <p> CPF
+    <input type="text" id="cpf" placeholder="Digite seu CPF"></p>
+    <p> Telefone
+    <input type="text" id="telefone" placeholder="Digite seu Telefone"></p>
+    <p>  Data
+    <input type="text" id="data" placeholder="Digite sua Data"></p>
+    <p> CEP
+    <input type="text" id="cep" placeholder="Digite seu CEP"></p>
+    <p> Email
+    <input type="text" id="email" placeholder="Digite seu Email"></p>
+    <button onclick="validar()">validar</button>
+  </div>
+
+    
+</body>
+
+<script>
+    
+
+     let cpf =document.getElementById('cpf');
+     cpf.addEventListener('input', formatarcpf);
+    
+     
+     function formatarcpf(e) {
+
+        let valor = e.target.value; 
+        valor = valor.replace(/\D/g, "");
+        valor = valor.slice(0, 11);
+        valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+        valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+        valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        e.target.value = valor;
+        
+    
+     }  
+
+     let telefone= document.getElementById('telefone');
+     telefone.addEventListener('input', formatartelefone);
+    
+     
+     function formatartelefone(e) {
+
+        let valor = e.target.value; 
+        valor = valor.replace(/\D/g, "");
+        valor = valor.slice(0, 11);
+        valor = valor.replace(/(\d{2})(\d)/, "($1) $2");
+        valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+        e.target.value = valor;
+
+     }
+     
+
+     let data= document.getElementById('data');
+     data.addEventListener('input', formatardata);
+    
+        function formatardata(e) {
+
+        let valor = e.target.value; 
+        valor = valor.replace(/\D/g, "");
+        valor = valor.slice(0, 8);
+        valor = valor.replace(/(\d{2})(\d)/, "$1/$2");
+        valor = valor.replace(/(\d{2})(\d)/, "$1/$2");
+       
+        e.target.value = valor;
+        
+        }
+
+     let cep= document.getElementById('cep');
+     cep.addEventListener('input', formatarcep);
+    
+        function formatarcep(e) {
+
+        let valor = e.target.value; 
+        valor = valor.replace(/\D/g, "");
+        valor = valor.slice(0, 8);
+        valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+        
+        
+        e.target.value = valor;
+
+        }
+
+     let nome= document.getElementById('nome');
+     nome.addEventListener('input', formatarnome);
+    
+        function formatarnome(e) {
+
+        let valor = e.target.value; 
+        valor = valor.replace(/[0-9]/g, "");
+       
+        e.target.value = valor;
+
+
+
+        }
+
+       
+
+
+
+
+        
+    
+       
+
+     
+
+
+     
+
+
+        function validar() {
+
+            let nome = document.getElementById('nome').value;
+                 if (nome === "") {
+                    alert("Digite o Nome");
+                 return;
+                }
+
+
+            let cpf = document.getElementById('cpf').value;
+            let regexcpf= /^[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}$/;
+
+                if (cpf === "") {
+                    alert("Digite o CPF");
+                    return;
+                }
+
+                if (cpf.length < 11){
+                    alert("CPF Incompleto");
+                    return;
+                }
+
+                if (!regexcpf.test(cpf)) {
+                    alert("CPF Invalido");
+                    return;
+              
+                }
+
+            let telefone = document.getElementById('telefone').value;
+            let regextele = /^\([0-9]{2}\) [0-9]{5}-[0-9]{4}$/;
+                if (telefone === "") {
+                    alert("Digite o Telefone");
+                    return;
+                }if (telefone.length < 9){
+                    alert("Telefone Incompleto");
+                    return;
+                }
+
+
+
+                if (!regextele.test(telefone)) {
+                    alert("Telefone Invalido");
+                    return;
+                }
+
+
+            let data  = document.getElementById('data').value;
+            let regexdata = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+                if (data === "") {
+                    alert("Digite a Data");
+                    return;
+                }
+
+                if (data.length < 8){
+                    alert("Data Incompleto");
+                    return;
+                }
+            
+                if (!regexdata.test(data)) {
+                    alert("Data Invalida");
+                    return
+              
+                }
+
+
+            let cep  = document.getElementById('cep').value;
+            let regexcep = /^[0-9]{5}-[0-9]{3}$/;
+
+ 
+                if (cep === ""){
+                    alert("Digite o CEP");
+                    return;
+
+                }
+                if (cep.length < 9){
+                     alert("CEP Incompleto");
+                    return;
+                }
+
+                if (!regexcep.test(cep)) {
+                    alert("CEP Invalido");
+                    return;
+                }
+
+              
+
+
+
+            let email = document.getElementById('email').value;
+            let regexemail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (email === ""){
+                    alert("Digite seu Email");
+                    return;
+                }
+
+                if (!regexemail.test(email)) {
+                    alert("Email Invalido");
+                    return;
+                }
+                
+              
+
+              
+
+            
+            alert("tudo certo");
+
+                
+              
+                
+ 
+                
+
+            }
+
+
+     
+        
+
+
+
+        </script>
+        </div>
+
+
+
+</html>

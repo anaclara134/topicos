@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <input type="text" id="cpf" placeholder="digite seu cpf">
+        <button onclick="validarcpf()">validar</button><br>
+         <input type="text" id="senha" placeholder="digite sua senha">
+        <button onclick="validarsenha()">validar</button><br>
+          <input type="text" id="email" placeholder="edigite seu email">
+        <button onclick="validaremail()">validar</button><br>
+         <input type="text" id="numero" placeholder="edigite seu numero">
+        <button onclick="validarnumero()">validar</button>
+
+
+   
+
+</body>
+<script>
+            function validarcpf() {
+
+                let valor= document.getElementById('cpf').value;
+                let regex = /^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}$/;
+
+                if (regex.test(valor)) {
+                    alert("cpf valido");
+                } else {
+                    alert("cpf invalido");
+
+                    
+                }
+
+
+            }
+        function validarsenha(){
+
+            let valor2= document.getElementById('senha').value;
+            let regex2 = /^[0-9]{8}[A-Z]{1}$/;
+
+            if (regex2.test(valor2)){
+                alert("senha valida");
+            } else {
+                alert("senha invalida");
+            }
+        }
+
+        function validaremail(){
+            let valor3= document.getElementById('email').value;
+            let regex3= /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+.com$/;
+
+            if (regex3.test(valor3)){
+                alert("email valido");
+            } else{
+                alert("email invalido");
+            }
+        }
+
+          function validarnumero(){
+            let valor4= document.getElementById('numero').value;
+            let regex4= /^[0-9]+$/;
+
+            if (regex4.test(valor4)){
+                alert("valido");
+            } else{
+                alert("invalido");
+            }
+        }
+
+
+
+
+        </script>
+
+</html>
